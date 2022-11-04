@@ -4,6 +4,7 @@ using Matei_Dragos_Lab2.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Matei_Dragos_Lab2.Migrations
 {
     [DbContext(typeof(Matei_Dragos_Lab2Context))]
-    partial class Matei_Dragos_Lab2ContextModelSnapshot : ModelSnapshot
+    [Migration("20221104130525_AuthorName")]
+    partial class AuthorName
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

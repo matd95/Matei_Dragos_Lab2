@@ -1,4 +1,4 @@
-﻿@page
+﻿@page "/"
 @model Matei_Dragos_Lab2.Pages.Books.IndexModel
 
 @{
@@ -39,7 +39,7 @@
                 @Html.DisplayFor(modelItem => item.Title)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Author)
+                @Html.DisplayFor(modelItem => item.Author.FullName)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Price)

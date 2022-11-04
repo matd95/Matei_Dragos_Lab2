@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Matei_Dragos_Lab2.Data;
 using Matei_Dragos_Lab2.Models;
 
-namespace Matei_Dragos_Lab2.Pages.Publishers
+namespace Matei_Dragos_Lab2.Pages.Authors
 {
     public class IndexModel : PageModel
     {
@@ -19,15 +19,13 @@ namespace Matei_Dragos_Lab2.Pages.Publishers
             _context = context;
         }
 
-        public IList<Publisher> Publisher { get;set; } = default!;
-
-
+        public IList<Author> Author { get;set; } = default!;
 
         public async Task OnGetAsync()
         {
-            if (_context.Publisher != null)
+            if (_context.Author != null)
             {
-                Publisher = await _context.Publisher.ToListAsync();
+                Author = await _context.Author.ToListAsync();
             }
         }
     }

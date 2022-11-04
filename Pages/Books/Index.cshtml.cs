@@ -27,6 +27,7 @@ namespace Matei_Dragos_Lab2.Pages.Books
             {
                 Book = await _context.Book
                     .Include(b => b.Publisher)
+                    .Include(c => c.Author)
                     .ToListAsync();
             }
         }
